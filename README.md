@@ -1,1 +1,1 @@
-# indecision-app-react
+# Expensify App
