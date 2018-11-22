@@ -3,28 +3,6 @@ import { Link } from "react-router-dom";
 import moment from "moment";
 import numeral from "numeral";
 
-numeral.register('locale', 'ng', {
-  delimiters: {
-    thousands: ' ',
-    decimal: ','
-  },
-  abbreviations: {
-    thousand: 'k',
-    million: 'm',
-    billion: 'b',
-    trillion: 't'
-  },
-  ordinal: function (number) {
-    return number === 1 ? 'er' : 'ème';
-  },
-  currency: {
-    symbol: '₦'
-  }
-});
-
-// switch between locales
-numeral.locale('ng');
-
 const ExpenseListItem = ({ description, amount, createdAt, id }) => (
   <div>
     <Link to={`/edit/${id}`}>
